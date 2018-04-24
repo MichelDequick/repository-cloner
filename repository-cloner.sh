@@ -6,7 +6,7 @@ succes=true
 if [ $# -eq 0 ]
     then
         echo "├ Please specify repositories file"
-        succes=false
+        $succes=false
     else
     # Extracting repo names out of given file
     readarray -t repositories < $1
@@ -36,12 +36,12 @@ if [ $# -eq 0 ]
         fi
         if [ ! -d "$name" ];
             then
-                succes = false
+                $succes=false
         fi
     done
 fi
 
-if [ succes ];
+if $succes;
     then
         echo "└ Executed succesfully"
     else
