@@ -3,7 +3,7 @@
 succes=true
 
 # Check if first argument is given
-if [ $1 -eq 0 ]
+if [ -z "$1" ]
     then
         echo "├ Please specify repositories file"
         succes=false
@@ -11,7 +11,7 @@ if [ $1 -eq 0 ]
     # Extracting repo names out of given file
     readarray -t repositories < $1
 
-    if [ $2 -eq 0 ]
+    if [ -z "$21" ]
         then
             echo "├ No target directory specified, executing locally"
         else
