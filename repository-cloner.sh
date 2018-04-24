@@ -11,7 +11,7 @@ if [ -z "$1" ]
     # Extracting repo names out of given file
     readarray -t repositories < $1
 
-    if [ -z "$21" ]
+    if [ -z "$2" ]
         then
             echo "├ No target directory specified, executing locally"
         else
