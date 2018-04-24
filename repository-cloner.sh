@@ -39,11 +39,11 @@ if [ $# -eq 0 ]
                 succes = false
         fi
     done
-    
-    if [ succes ];
-            then
-                echo "└ Executed succesfully"
-            else
-                echo "└ Cloning failed!"
-        fi
+fi
+
+if [ succes ];
+    then
+        echo "└ Executed succesfully"
+    else
+        echo "└ Cloning failed!"
 fi
