@@ -3,7 +3,7 @@
 succes=true
 
 # Check if first argument is given
-if [ $# -eq 0 ]
+if [ $1 -eq 0 ]
     then
         echo "├ Please specify repositories file"
         succes=false
@@ -11,7 +11,7 @@ if [ $# -eq 0 ]
     # Extracting repo names out of given file
     readarray -t repositories < $1
 
-    if [ $# -eq 0 ]
+    if [ $2 -eq 0 ]
         then
             echo "├ No target directory specified, executing locally"
         else
@@ -48,7 +48,7 @@ fi
 
 if $succes;
     then
-        echo "└ Executed succesfully"
+        echo "└ Execution was succesfull!"
     else
         echo "└ Execution failed!"
 fi
