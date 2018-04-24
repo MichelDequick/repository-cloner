@@ -26,16 +26,21 @@ if [ $# -eq 0 ]
         # Downloading the repo
         if [ ! -d "$name" ];
             then
-                echo Directory $name is not detected, cloning repository...
-                git clone $repo
+                echo "├ Cloning $name"
+                {
+                    git clone $repo
+                } 2> /dev/null
             else
-                echo Directory $name already exists, pulling latest version...
+                echo "├ Directory $name already exists, pulling latest version..."
                 cd $name
-                git pull $repo
+                {
+                    git pull $repo
+                } 2> /dev/null
                 cd ..
         fi
         if [ ! -d "$name" ];
             then
+                echo "├ Cloning $name failed"
                 succes=false
         fi
     done
@@ -45,5 +50,5 @@ if $succes;
     then
         echo "└ Executed succesfully"
     else
-        echo "└ Cloning failed!"
+        echo "└ Execution failed!"
 fi
