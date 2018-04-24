@@ -15,4 +15,4 @@ Execute folowing comand to download the script.
     * arg2: path to folder to clone everything in
 
 ### Example
-Executing `./repository-cloner.sh example.txt /tmp` will clone all repositories mentioned in `example.txt` int the `/tmp` folder
+Executing `./repository-cloner.sh example.txt /tmp` will clone all repositories mentioned in `example.txt` into the `/tmp` folder
