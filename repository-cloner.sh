@@ -36,15 +36,11 @@ if [ -z "$1" ]
         if [ ! -d "$name" ];
             then
                 echo "▶ Cloning $name"
-                {
                     git clone $repo
-                } 2> /dev/null
             else
                 echo "▶ Updating $name"
                 cd $name
-                {
                     git pull $repo
-                } 2> /dev/null
                 cd ..
         fi
         if [ ! -d "$name" ];
