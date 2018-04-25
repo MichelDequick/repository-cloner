@@ -2,6 +2,7 @@
 
 succes=true
 
+# Font: http://patorjk.com/software/taag/#p=display&f=Slant&t=RepoCloner
 echo ""
 echo "    ____                   ________                     "
 echo "   / __ \___  ____  ____  / ____/ /___  ____  ___  _____"
